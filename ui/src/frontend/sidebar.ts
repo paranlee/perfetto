@@ -293,6 +293,7 @@ function getFileElement(): HTMLInputElement {
 function popupFileSelectionDialog(e: Event) {
   e.preventDefault();
   delete getFileElement().dataset['useCatapultLegacyUi'];
+  getFileElement().setAttribute('accept', '.json');
   getFileElement().click();
 }
 
